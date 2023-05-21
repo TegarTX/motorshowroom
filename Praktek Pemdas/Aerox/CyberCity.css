@@ -1,0 +1,395 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+.container {
+  width: 100%;
+  /* height: 100vh; */
+  overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --darkblue: #252c33;
+  --yellow: #d3af37;
+}
+
+/* NAV */
+
+nav {
+  background-color: var(--darkblue);
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: "Inter", sans-serif;
+  color: var(--yellow);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 31px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #d3af37;
+  font-size: 17px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 34px;
+  /* padding: 0 40px; */
+  position: relative;
+}
+
+.nav-item a::after {
+  width: 100%;
+  height: 2px;
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+  background-color: var(--yellow);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+
+.nav-item a:hover:after {
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+
+#nav-item-center {
+  margin: 0 60px;
+}
+
+#nav-item-last {
+  margin-right: 60px;
+}
+
+.nav-item a::after {
+  width: 100%;
+  height: 2px;
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+  background-color: var(--yellow);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+
+.nav-item a:hover:after {
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* CONTENT */
+
+section {
+  width: 100%;
+  padding: 100px 100px 50px 100px ;
+}
+
+.box img {
+  width: 400px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  margin-bottom: 50px;
+  cursor: default;
+}
+
+.detail-item {
+  width: 100%;
+  /* height: 500px; */
+  padding: 0 100px;
+  background-image: url(image\ 39.png);
+  background-repeat: no-repeat;
+  background-size: 350px;
+  overflow: visible;
+  background-position: 100px;
+}
+
+.item-name {
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+/* line-height: 36px; */
+
+color: #252C33;
+
+}
+
+.item-name span {
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+/* line-height: 29px; */
+}
+
+.price {
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 35px;
+line-height: 48px;
+color: #333;
+}
+
+.color {
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 29px;
+color: #252C33;
+}
+
+.colors {
+  display: flex;
+  margin-top: 10px;
+  gap: 15px;
+  
+}
+
+.blue {
+  width: 30px;
+  height: 30px;
+  background-color: #0A1BB0;
+  border-radius: 50%;
+}
+
+.japan {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 1px black;
+  
+}
+
+.red {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.stok {
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+color: #252C33;
+}
+
+.wishlist p {
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+color: #252C33;
+/* identical to box height */
+
+}
+
+.wishlist {
+  margin: 30px 40px;
+  display: flex;
+align-items: center;
+text-align: center;
+
+}
+
+.other-image {
+  display: flex;
+  gap: 20px;
+  /* cursor: pointer; */
+}
+
+.other-image img {
+  width: 140px;
+  cursor: pointer;
+}
+
+.btn {
+  width: 180px;
+  height: 40px;
+  background-color: #d3af37;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  margin-left: -100px;
+  cursor: pointer;
+}
+
+.button a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.box-bottom-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.box-bottom{
+  width: 100%;
+  display: flex;
+}
+
+.box-bottom-right {
+  width: 50%;
+  padding-top: 50px;
+}
+
+.other-item h1 {
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+text-align: center;
+color: #252C33;
+
+}
+
+.box-item img{
+  width: 200px;
+  cursor: pointer;
+}
+
+.box-item p {
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+/* line-height: 24px; */
+
+color: #333;
+}
+
+.box-item span {
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+
+color: #252C33;
+}
+
+.other-motor {
+  display: flex;
+  gap: 20px;
+}
+
+footer {
+  width: 100%;
+  height: 320px;
+  background-color: #252c33;
+  color: #d3af37;
+}
+
+.text-left {
+  width: 200px;
+}
+
+.text-left h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.text-left p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.text-right h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.text-right p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.box-footer {
+  width: 100%;
+  padding: 50px 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#hash {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#hash p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+}
+
