@@ -10,7 +10,7 @@ body {
 
 .container {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   overflow-x: hidden;
 }
 
@@ -18,12 +18,22 @@ body {
   display: none;
 }
 
+
+
 :root {
   --darkblue: #252c33;
   --yellow: #d3af37;
 }
 
 /* NAV */
+
+nav .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
 
 nav {
   background-color: var(--darkblue);
@@ -41,12 +51,14 @@ nav {
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 31px;
+  /* line-height: 31px; */
 }
 
 .nav-item {
   display: flex;
-  justify-content: center;
+  /* justify-content: right; */
+  align-items: center;
+  gap: 30px;
 }
 
 .nav-item a {
@@ -56,9 +68,10 @@ nav {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  line-height: 34px;
+  /* line-height: 34px; */
   /* padding: 0 40px; */
   position: relative;
+  overflow: hidden;
 }
 
 .nav-item a::after {
@@ -78,31 +91,49 @@ nav {
   transition: all 0.2s ease-in-out;
 }
 
-#nav-item-center {
-  margin: 0 60px;
+
+
+
+.nav-item a::after {
+  width: 100%;
+  height: 2px;
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+  background-color: var(--yellow);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+
+.nav-item a:hover:after {
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+
+span#counter {
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  color: #d3af37;
+  /* bor */
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  font-size: 14px;
+  border: 1px solid #d3af37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav span.material-symbols-outlined {
+  font-size: 30px;
 }
 
 #nav-item-last {
-  margin-right: 60px;
-}
-
-.nav-item a::after {
-  width: 100%;
-  height: 2px;
-  transform: scale(0);
-  transition: all 0.2s ease-in-out;
-  background-color: var(--yellow);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: "";
-}
-
-.nav-item a:hover:after {
-  transform: scale(1);
-  transition: all 0.2s ease-in-out;
-}
-
+  width: 44px;  
+} 
 /* CONTENT */
 
 section {
@@ -133,7 +164,7 @@ section {
 
 .box-motor {
   width: 25%;
-  height: 400px;
+  height: 430px;
   border-radius: 20px;
   background-color: #252c33;
   display: flex;
